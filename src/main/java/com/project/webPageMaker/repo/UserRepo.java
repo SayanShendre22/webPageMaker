@@ -7,4 +7,6 @@ import com.project.webPageMaker.Models.User;
 
 public interface UserRepo extends JpaRepository<User, Integer> {
 
+	public User findUserByPasswordAndEmail(String password, String email);
+	
 }

@@ -4,20 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome Page</title>
+<title>Insert title here</title>
 </head>
 <body>
-	Welcome to our project
-	
-	
-	
-	
-	
-	<hr>
-	<br>
-	
-	<a href="registerPage.jsp" >create your page</a>
-	<a href="login.jsp" >Login </a>
-	
+Home page
 </body>
 </html>

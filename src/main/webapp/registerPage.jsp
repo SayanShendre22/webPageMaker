@@ -10,9 +10,13 @@
 
 	Welcome to Register Page
 	
-	<form>
+	<form action="handleUserReg"  method="post">
 	
-	<input type="text"   >
+	<input type="text" name="userName"  placeholder="Enter Your User Name"  >
+	<input type="email" name="email" placeholder="Enter Your Email"  >
+	<input type="password" name="password" placeholder="Enter Your Password"  >
+	
+	<button type="submit" >Submit</button>
 	
 	</form>
 
