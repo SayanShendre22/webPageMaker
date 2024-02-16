@@ -9,6 +9,7 @@ public class WebPageMakerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WebPageMakerApplication.class, args);
 		// hi i am motuuu
+		// And 143 chotuu 😘😘😘❤❤
 	}
 
 }
