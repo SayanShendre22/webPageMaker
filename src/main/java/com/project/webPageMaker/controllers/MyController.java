@@ -35,9 +35,9 @@ public class MyController {
 		String password = user.getPassword();
 		
 		User u = ur.findUserByPasswordAndEmail(password, email);
-		System.out.println(u);
+//		System.out.println(u);
 		if(u!=null) {
-			System.out.println("inside");
+//			System.out.println("inside");
 			req.getSession().setAttribute("CurrentUser", u);
 			return "home.jsp";
 		}
@@ -45,6 +45,12 @@ public class MyController {
 		return "login.jsp";
 	}
 	
+
+	@RequestMapping("/HandleLogout")
+	public String HandleLogout(HttpServletRequest req) {
+		req.getSession().removeAttribute("CurrentUser");
+		return "login.jsp";
+	}
 	
 	
 
