@@ -8,7 +8,6 @@ public class WebPageMakerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WebPageMakerApplication.class, args);
-
+		
 	}
-
 }
