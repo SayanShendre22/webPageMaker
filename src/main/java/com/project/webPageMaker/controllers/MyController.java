@@ -1,6 +1,5 @@
 package com.project.webPageMaker.controllers;
 
-import java.net.http.HttpRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,6 @@ import com.project.webPageMaker.Models.User;
 import com.project.webPageMaker.repo.UserRepo;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MyController {
