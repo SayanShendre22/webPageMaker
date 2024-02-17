@@ -9,63 +9,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<style>
-/*Profile Pic Start*/
-.picture-container {
-	position: relative;
-	cursor: pointer;
-	text-align: center;
-}
-
-.picture {
-	width: 106px;
-	height: 106px;
-	background-color: #999999;
-	border: 4px solid #CCCCCC;
-	color: #FFFFFF;
-	border-radius: 50%;
-	margin: 0px auto;
-	overflow: hidden;
-	transition: all 0.2s;
-	-webkit-transition: all 0.2s;
-}
-
-.picture:hover {
-	border-color: #2ca8ff;
-}
-
-.content.ct-wizard-green .picture:hover {
-	border-color: #05ae0e;
-}
-
-.content.ct-wizard-blue .picture:hover {
-	border-color: #3472f7;
-}
-
-.content.ct-wizard-orange .picture:hover {
-	border-color: #ff9500;
-}
-
-.content.ct-wizard-red .picture:hover {
-	border-color: #ff3b30;
-}
-
-.picture input[type="file"] {
-	cursor: pointer;
-	display: block;
-	height: 100%;
-	left: 0;
-	opacity: 0 !important;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-.picture-src {
-	width: 100%;
-}
-/*Profile Pic End*/
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -107,49 +51,26 @@
 						type="file" id="wizard-picture" class="">
 				</div>
 				<h6 class="">Choose Picture</h6>
-
+               
 			</div>
 		</div>
 	</div>
+	<form>
+  <label for="title">Title</label><br>
+  <input type="text" id="title" name="title"><br>
+  <label for="note">About</label><br>
+  <input type="text" id="note" name="note">
+    <h1>
+       Enter all your links
+    </h1>
+    <div id="innerdiv"></div>
+    <button id="mybutton">
+        click me
+    </button>
+</form>
 
 
-	<script type="text/javascript">
-		let x = 0;
-		function togglePageDataForm() {
-			console.log("sayan " + x)
-			if (x == 0) {
-				document.getElementById("StartToggleBtn").innerHTML = "end";
-				document.getElementById("DataForm").style.display = "block";
-				x = 1
-			} else {
-				document.getElementById("StartToggleBtn").innerHTML = "start";
-				document.getElementById("DataForm").style.display = "none";
-				x = 0
+	<script type="text/javascript" src = "jvascript.js"></script>
 
-			}
-
-		}
-	</script>
-	<script>
-		$(document).ready(function() {
-			// Prepare the preview for profile picture
-			$("#wizard-picture").change(function() {
-				readURL(this);
-				console.log("url taken"+ this)
-			});
-		});
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-
-				reader.onload = function(e) {
-					$('#wizardPicturePreview').attr('src', e.target.result)
-							.fadeIn('slow');
-					console.log("url uploaded "+ e.target.result)
-				}
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-	</script>
 </body>
 </html>
